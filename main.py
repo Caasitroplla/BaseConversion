@@ -1,4 +1,6 @@
 #This will be where scripts will be imported and run
+print("hello world")
+=======
 
 '''
 Step 1 - Divide the decimal number to be converted by the value of the new base
@@ -19,7 +21,3 @@ def normalise(input, inputBase):
 
   for char in input:
     characters.append(char) # replace with search function appending place vlaue to array
-
-
-
-
