@@ -18,6 +18,8 @@ def normalise(input, inputBase):
   characters = []
 
   for char in input:
-    characters.append(char)
+    characters.append(char) # replace with search function appending place vlaue to array
+
+
 
 
