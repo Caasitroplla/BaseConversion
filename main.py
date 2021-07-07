@@ -9,7 +9,12 @@ Step 4 - Record the remainder from Step 3 as the next digit (to the left) of the
 '''
 
 # hate this arracy would remove it if not necessary
-allChars = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+allChars = [
+  '0','1','2','3','4','5','6','7','8','9',
+  'A','B','C','D','E','F','G','H','I','J',
+  'K','L','M','N','O','P','Q','R','S','T',
+  'U','V','W','X','Y','Z'
+]
 
 def main():
   pass
