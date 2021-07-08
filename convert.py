@@ -32,7 +32,3 @@ def de_normalise(input_value: int, output_base: int):
       input_value -= (output_base ** i)
 
   # Im stuck this is just going to binary at this point with different base
-
-def convert(value, targetBase, base: int=10):
-    if base != 10:
-        normalise
