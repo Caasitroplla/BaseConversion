@@ -1,6 +1,3 @@
-from main import normalise
-
-
 def normalise(input_value: str, input_value_base: int):
 
   values = []
@@ -9,7 +6,7 @@ def normalise(input_value: str, input_value_base: int):
   # Create an array of the values of each character
   for char in input_value:
     # Adds the numerical of each character to the array
-    values.append(all_chars.index(char)) 
+    values.append(all_chars.index(char))
 
   # Need to iterate through the array in reverse
   for value in reversed(values):
