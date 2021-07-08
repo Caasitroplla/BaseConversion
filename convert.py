@@ -26,6 +26,7 @@ def normalise(input_value: str, input_value_base: int):
 def de_normalise(input_value: int, output_base: int):
 
   values = []
+  output_string = ''
 
   # First we need to find the first power of the base thats above the input_value
   power = 0
@@ -36,6 +37,24 @@ def de_normalise(input_value: int, output_base: int):
   # Go through every power seeing if it can be taken from the input_value (also need to do it in reverse greatest power first)
   for i in range(power, 0):
     if output_base ** i < input_value:
-      input_value -= (output_base ** i)
 
-  # Im stuck this is just going to binary at this point with different base
+      # This append the numerical value to the array
+      values.append(input_value // output_base ** i)
+
+      # This finds the remainder left from the above value
+      input_value = input_value % output_base ** i
+
+  for i in range(len(values)):
+    output_string += all_chars[values[i]]
+
+  return output_string
+
+
+
+
+
+
+
+
+
+
