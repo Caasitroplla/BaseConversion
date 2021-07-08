@@ -31,7 +31,7 @@ def normalise(input_value: str, input_value_base: int):
     # Now for each value we time it by the base to the power of its index then add it to deanary total
     deanary_value += value * (input_value_base ** reversed(values).index(value))
 
-return deanary_value
+  return deanary_value
 
 
 def de_normalise(input_value): int, output_base: int):
@@ -50,4 +50,3 @@ def de_normalise(input_value): int, output_base: int):
       input_value -= (output_base ** i)
 
   # Im stuck this is just going to binary at this point with different base
-  
