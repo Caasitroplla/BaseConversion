@@ -29,28 +29,33 @@ def de_normalise(input_value: int, output_base: int):
   output_string = ''
 
   # First we need to find the first power of the base thats above the input_value
-  power = 0
-  while input_value < output_base ** power:
+  power = int(0)
+  while input_value > output_base ** power:
     # Increases the power by until its greater than the input_value
     power += 1
 
+  # Going to create the headers or an array of output_base to the different powers
+  header_arr = []
+  for i in range(0, power):
+    header_arr.append(output_base ** i)
+
+  header_arr.reverse()
+
   # Go through every power seeing if it can be taken from the input_value (also need to do it in reverse greatest power first)
-  for i in range(power, 0):
-    if output_base ** i < input_value:
+  for i in range(0, len(header_arr)):
+    if header_arr[i] < input_value:
 
       # This append the numerical value to the array
-      values.append(input_value // output_base ** i)
+      values.append(input_value // header_arr[i])
 
       # This finds the remainder left from the above value
-      input_value = input_value % output_base ** i
+      input_value = input_value % header_arr[i]
 
-  for i in range(len(values)):
-    output_string += all_chars[values[i]]
+  # Turning numerical values to alphanumerical ones
+  for value in values:
+    output_string = output_string + all_chars[value]
 
   return output_string
-
-
-
 
 
 
