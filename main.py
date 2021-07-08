@@ -34,7 +34,7 @@ def normalise(input_value: str, input_value_base: int):
   return deanary_value
 
 
-def de_normalise(input_value): int, output_base: int):
+def de_normalise(input_value: int, output_base: int):
 
   values = []
 
