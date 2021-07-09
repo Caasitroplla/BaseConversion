@@ -7,6 +7,8 @@ all_chars = [
 
 def normalise(input_value: str, input_value_base: int):
 
+  input_value.upper()
+
   if input_value_base == 10:
     return input_value
 
@@ -18,15 +20,20 @@ def normalise(input_value: str, input_value_base: int):
     # Adds the numerical of each character to the array
     values.append(all_chars.index(char))
 
+  values.reverse()
+  
   # Need to iterate through the array in reverse
-  for value in reversed(values):
+  for i in range(0, len(values)):
     # Now for each value we time it by the base to the power of its index then add it to deanary total
-    deanary_value += value * (input_value_base ** (len(values)-values.index(value)))
+    deanary_value += values[i] * (input_value_base ** i)
 
-  return deanary_value
+  return str(deanary_value)
 
 
 def de_normalise(input_value: int, output_base: int):
+
+  if output_base == 10:
+    return input_value
 
   values = []
   output_string = ''
@@ -59,3 +66,5 @@ def de_normalise(input_value: int, output_base: int):
     output_string = output_string + all_chars[value]
 
   return output_string
+
+print(de_normalise(170,10))
