@@ -10,6 +10,7 @@ window.geometry('300x200')
 # Title the window
 window.title('Base Convertor')
 
+
 def convert():
 	input_base = input_base_var.get()
 	output_base = output_base_var.get()
@@ -17,7 +18,6 @@ def convert():
 	nomalised = normalise(input_value, int(input_base))
 	output_var.set(str(de_normalise(int(nomalised), int(output_base))))
 	output_box.config(text=output_var.get())
-
 
 
 options = [
@@ -84,6 +84,3 @@ output_box.grid(row=4, column=1)
 
 # Show the window
 window.mainloop()
-
-
-
